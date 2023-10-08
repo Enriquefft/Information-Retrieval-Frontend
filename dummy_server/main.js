@@ -20,10 +20,10 @@ app.post("/search", (req, res) => {
   const data = Array.from({ length: numResults }, (_, i) => `Result ${i + 1}`);
 
   // Simulate the time taken for the query (in milliseconds)
-  const timeTaken = Math.floor(Math.random() * 1000);
+  const time = Math.floor(Math.random() * 1000);
 
   // Return the data and time taken as JSON response
-  res.json({ data, timeTaken });
+  res.json({ data, time });
 });
 
 // Start the server
